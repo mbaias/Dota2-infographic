@@ -1,0 +1,26 @@
+:root {
+  --primary-color: #3d1e6d;
+  --light-primary-color: #8874a3;
+  --dark-primary-color: #2e003e;
+  --secondary-color: #ffa400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  margin: 0;
+  background: var(--dark-primary-color);
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1px;
+}
