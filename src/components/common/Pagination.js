@@ -118,13 +118,17 @@ class Pagination extends React.Component {
 
     return (
       <ul className="pagination">
-        <li
-          className={pager.currentPage === 1 ? 'disabled' : 'pagination__item'}
-        >
-          <a className="pagination__link" onClick={() => this.setPage(1)}>
-            First
-          </a>
-        </li>
+        {pager.currentPage !== 1 && (
+          <li
+            className={
+              pager.currentPage === 1 ? 'disabled' : 'pagination__item'
+            }
+          >
+            <a className="pagination__link" onClick={() => this.setPage(1)}>
+              First
+            </a>
+          </li>
+        )}
         <li
           className={pager.currentPage === 1 ? 'disabled' : 'pagination__item'}
         >
@@ -132,7 +136,7 @@ class Pagination extends React.Component {
             className="pagination__link"
             onClick={() => this.setPage(pager.currentPage - 1)}
           >
-            Previous
+            <i className="fas fa-angle-left" />
           </a>
         </li>
         {pager.pages.map((page, index) => (
@@ -160,7 +164,7 @@ class Pagination extends React.Component {
             className="pagination__link"
             onClick={() => this.setPage(pager.currentPage + 1)}
           >
-            Next
+            <i className="fas fa-angle-right" />
           </a>
         </li>
         <li

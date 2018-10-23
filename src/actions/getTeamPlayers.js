@@ -33,7 +33,7 @@ export const getTeamPlayers = teamId => async dispatch => {
 };
 
 const getTeamPlayersSuccess = (currentPlayers, formerPlayers) => ({
-  type: actions.getTeamPlayers,
+  type: actions.getTeam.getTeamPlayers,
   currentPlayers,
   formerPlayers,
 });

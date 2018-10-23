@@ -14,6 +14,6 @@ export const getTeamMatches = teamId => async dispatch => {
 };
 
 const getTeamMatchesSuccess = matches => ({
-  type: actions.getTeamMatches,
+  type: actions.getTeam.getTeamMatches,
   matches,
 });

@@ -2,15 +2,15 @@ import actions from '../actions/actionsConstants';
 
 const initialState = {
   error: null,
-  team: {},
+  teamHeroes: [],
 };
 
-export const getTeamDetails = (state = initialState, action) => {
+export const getTeamHeroes = (state = initialState, action) => {
   switch (action.type) {
-    case actions.getTeam.getTeamDetails:
+    case actions.getTeam.getTeamHeroes:
       return {
         ...state,
-        team: action.team,
+        teamHeroes: action.teamHeroes,
       };
     default:
       return state;

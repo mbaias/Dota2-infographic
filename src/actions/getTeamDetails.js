@@ -12,6 +12,6 @@ export const getTeamDetails = teamId => async dispatch => {
 };
 
 const getTeamDetailsSuccess = team => ({
-  type: actions.getTeamDetails,
+  type: actions.getTeam.getTeamDetails,
   team,
 });

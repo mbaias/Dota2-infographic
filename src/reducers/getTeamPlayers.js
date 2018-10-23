@@ -8,7 +8,7 @@ const initialState = {
 
 export const getTeamPlayers = (state = initialState, action) => {
   switch (action.type) {
-    case actions.getTeamPlayers:
+    case actions.getTeam.getTeamPlayers:
       return {
         currentPlayers: [...action.currentPlayers],
         formerPlayers: [...action.formerPlayers],

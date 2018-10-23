@@ -14,7 +14,7 @@
 }
 
 .team-matches-container {
-  width: 70%;
+  width: 65%;
   margin-bottom: 50px;
   margin-top: 20px;
 }
@@ -47,6 +47,7 @@
   width: 100%;
   border-spacing: 0;
   text-align: left;
+  table-layout: fixed;
 }
 
 .table__header {
@@ -58,14 +59,35 @@
   padding: 20px;
 }
 
+.table__heading--small {
+  width: 100px;
+}
+
+.table__heading--medium {
+  width: 150px;
+}
+
+.wide {
+  width: 50%;
+}
+
 .table__body {
   color: #fff;
 }
 
+.table__row {
+  height: 60px;
+}
+
 .table__item {
-  padding: 10px 15px;
+  padding: 10px 0 10px 20px;
   font-size: 0.9rem;
-  height: 48px;
+}
+
+.table__item__text {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -81,7 +103,7 @@
 }
 
 .table__item--lost {
-  color: #fa004f;
+  color: #ff3902;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -147,4 +169,22 @@
   text-align: center;
   color: var(--secondary-color);
   margin-bottom: 5px;
+}
+
+.team-heroes-container {
+  width: calc(35% - 20px);
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.table__item__body {
+  display: flex;
+}
+
+.table__img-container {
+  margin-right: 10px;
+}
+
+.table__img-container > img {
+  min-width: 50px;
 }
