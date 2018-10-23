@@ -1,0 +1,150 @@
+.team-details {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.team-details-info-container {
+  width: 20%;
+  margin-right: 20px;
+}
+
+.team-details-info__logo {
+  margin-bottom: 20px;
+}
+
+.team-matches-container {
+  width: 70%;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.team-matches-header {
+  color: #fff;
+  position: relative;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.team-matches-header__icon {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+/* .team-matches-header:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  width: 5px;
+  height: 100%;
+} */
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  text-align: left;
+}
+
+.table__header {
+  background-color: var(--dark-primary-color);
+  color: var(--secondary-color);
+}
+
+.table__heading {
+  padding: 20px;
+}
+
+.table__body {
+  color: #fff;
+}
+
+.table__item {
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  height: 48px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.table__item--small {
+  font-size: 0.8rem;
+}
+
+.table__item--won {
+  color: #86f700;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.table__item--lost {
+  color: #fa004f;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.table__item__league-name {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+.table__link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.table__row:nth-child(odd) {
+  background-color: rgba(136, 116, 163, 30%);
+}
+
+.table__image {
+  max-height: 45px;
+  width: 35px;
+  margin-right: 10px;
+}
+
+.team-players-container {
+  width: calc(80% - 20px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.team-player {
+  display: flex;
+  flex-direction: column;
+  width: calc(16% - 20px);
+}
+
+.team-player__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-player-statistics {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.team-player__info > img {
+  border-radius: 50%;
+  border: 3px solid var(--light-primary-color);
+  box-shadow: inset 0 0 10px 1px var(--light-primary-color);
+}
+
+.team-player__name {
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+}

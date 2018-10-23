@@ -8,4 +8,5 @@ export default {
     heroes: 'GET_PLAYER_HEROES',
   },
   getHeroes: 'GET_HEROES',
+  getTeamDetails: 'GET_TEAM_DETAILS',
 };

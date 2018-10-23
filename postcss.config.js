@@ -8,5 +8,6 @@ module.exports = {
       },
     }),
     require('cssnano'),
+    require('lost')
   ],
 };

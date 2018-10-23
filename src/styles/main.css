@@ -12,15 +12,19 @@
 body {
   font-family: "Muli", sans-serif;
   margin: 0;
-  background: var(--dark-primary-color);
+  background: var(--primary-color);
 }
 
 p {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
-  width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
   padding-top: 1px;
 }
