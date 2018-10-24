@@ -28,3 +28,17 @@ img {
   margin: 0 auto;
   padding-top: 1px;
 }
+
+.table-header {
+  color: #fff;
+  position: relative;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.table-header__icon {
+  font-size: 1rem;
+  margin-right: 10px;
+}

@@ -13,7 +13,15 @@ const Team = ({ team }) => (
   >
     <div className="team-info">
       <div className="team-logo">
-        <img src={team.logo_url} alt={team.name} className="team-logo__image" />
+        {team.logo_url ? (
+          <img
+            src={team.logo_url}
+            alt={team.name}
+            className="team-logo__image"
+          />
+        ) : (
+          <span className="team-logo__image" />
+        )}
       </div>
       <p className="team__name">{team.name}</p>
     </div>

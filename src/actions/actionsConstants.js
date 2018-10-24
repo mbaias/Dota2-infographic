@@ -1,5 +1,7 @@
 export default {
-  getTeams: 'GET_TEAMS',
+  getAllTeams: 'GET_ALL_TEAMS',
+  getSearchedTeams: 'GET_SEARCHED_TEAMS',
+  clearTeamList: 'CLEAR_TEAM_LIST',
   getPlayer: {
     profile: 'GET_PLAYER_INFO',
     recentMatches: 'GET_PLAYER_RECENT_MATCHES',

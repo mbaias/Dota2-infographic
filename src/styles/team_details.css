@@ -1,7 +1,6 @@
 .team-details {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
 }
 
 .team-details-info-container {
@@ -19,30 +18,6 @@
   margin-top: 20px;
 }
 
-.team-matches-header {
-  color: #fff;
-  position: relative;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-}
-
-.team-matches-header__icon {
-  font-size: 1rem;
-  margin-right: 10px;
-}
-
-/* .team-matches-header:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  background-color: #fff;
-  width: 5px;
-  height: 100%;
-} */
-
 .table {
   width: 100%;
   border-spacing: 0;
@@ -57,6 +32,10 @@
 
 .table__heading {
   padding: 20px;
+}
+
+.table__heading--smallest {
+  width: 60px;
 }
 
 .table__heading--small {
@@ -82,6 +61,10 @@
 .table__item {
   padding: 10px 0 10px 20px;
   font-size: 0.9rem;
+}
+
+.table__item:last-child {
+  padding-right: 10px;
 }
 
 .table__item__text {

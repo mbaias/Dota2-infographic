@@ -1,14 +1,27 @@
 import actions from '../actions/actionsConstants';
 
 const initialState = {
-  teams: [],
+  error: null,
+  allTeams: [],
+  searchedTeams: [],
 };
 
 export function getTeams(state = initialState, action) {
   switch (action.type) {
-    case actions.getTeams:
+    case actions.getSearchedTeams:
       return {
-        teams: [...action.teams],
+        ...state,
+        searchedTeams: action.searchedTeams,
+      };
+    case actions.getAllTeams:
+      return {
+        ...state,
+        allTeams: action.teams,
+      };
+    case actions.clearTeamList:
+      return {
+        ...state,
+        searchedTeams: [],
       };
     default:
       return state;

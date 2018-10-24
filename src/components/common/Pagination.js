@@ -118,27 +118,23 @@ class Pagination extends React.Component {
 
     return (
       <ul className="pagination">
-        {pager.currentPage !== 1 && (
-          <li
-            className={
-              pager.currentPage === 1 ? 'disabled' : 'pagination__item'
-            }
-          >
+        {pager.currentPage > 3 && (
+          <li className="pagination__item">
             <a className="pagination__link" onClick={() => this.setPage(1)}>
               First
             </a>
           </li>
         )}
-        <li
-          className={pager.currentPage === 1 ? 'disabled' : 'pagination__item'}
-        >
-          <a
-            className="pagination__link"
-            onClick={() => this.setPage(pager.currentPage - 1)}
-          >
-            <i className="fas fa-angle-left" />
-          </a>
-        </li>
+        {pager.currentPage !== 1 && (
+          <li className="pagination__item">
+            <a
+              className="pagination__link"
+              onClick={() => this.setPage(pager.currentPage - 1)}
+            >
+              <i className="fas fa-angle-left pagination__icon" />
+            </a>
+          </li>
+        )}
         {pager.pages.map((page, index) => (
           <li key={index} className="pagination__item">
             <a
@@ -153,34 +149,26 @@ class Pagination extends React.Component {
             </a>
           </li>
         ))}
-        <li
-          className={
-            pager.currentPage === pager.totalPages
-              ? 'disabled'
-              : 'pagination__item'
-          }
-        >
-          <a
-            className="pagination__link"
-            onClick={() => this.setPage(pager.currentPage + 1)}
-          >
-            <i className="fas fa-angle-right" />
-          </a>
-        </li>
-        <li
-          className={
-            pager.currentPage === pager.totalPages
-              ? 'disabled'
-              : 'pagination__item'
-          }
-        >
-          <a
-            className="pagination__link"
-            onClick={() => this.setPage(pager.totalPages)}
-          >
-            Last
-          </a>
-        </li>
+        {pager.currentPage !== pager.totalPages && (
+          <li className="pagination__item">
+            <a
+              className="pagination__link"
+              onClick={() => this.setPage(pager.currentPage + 1)}
+            >
+              <i className="fas fa-angle-right pagination__icon" />
+            </a>
+          </li>
+        )}
+        {pager.currentPage - pager.totalPages < -2 && (
+          <li className="pagination__item">
+            <a
+              className="pagination__link"
+              onClick={() => this.setPage(pager.totalPages)}
+            >
+              Last
+            </a>
+          </li>
+        )}
       </ul>
     );
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { range } from 'lodash';
-import { getTeams } from '../../actions/getTeams';
+import { getSearchedTeams } from '../../actions/getTeams';
 import '../../styles/search.css';
 
 class Search extends Component {
@@ -19,7 +19,7 @@ class Search extends Component {
     e.preventDefault();
 
     if (searchItem.length >= 3) {
-      this.props.getTeams(searchItem);
+      this.props.getSearchedTeams(searchItem);
     }
   };
 
@@ -56,13 +56,13 @@ class Search extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  getTeams: searchItem => {
-    dispatch(getTeams(searchItem));
+  getSearchedTeams: searchItem => {
+    dispatch(getSearchedTeams(searchItem));
   },
 });
 
 Search.propTypes = {
-  getTeams: PropTypes.func.isRequired,
+  getSearchedTeams: PropTypes.func.isRequired,
 };
 
 export default connect(

@@ -82,8 +82,8 @@ class TeamDetails extends Component {
           <TeamPlayers players={teamPlayers} />
         </section>
         <section className="team-matches-container">
-          <h2 className="team-matches-header">
-            <i className="fas fa-play team-matches-header__icon" />
+          <h2 className="table-header">
+            <i className="fas fa-play table-header__icon" />
             Team Matches
           </h2>
           <TeamMatches matches={matchesPerPage} />
@@ -94,8 +94,8 @@ class TeamDetails extends Component {
           />
         </section>
         <section className="team-heroes-container">
-          <h2 className="team-matches-header">
-            <i className="fas fa-play team-matches-header__icon" />
+          <h2 className="table-header">
+            <i className="fas fa-play table-header__icon" />
             Team Heroes
           </h2>
           <TeamHeroes teamHeroes={heroesPerPage} allHeroes={allHeroes} />

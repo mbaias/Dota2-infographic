@@ -28,3 +28,7 @@
   background: #fff;
   color: var(--primary-color);
 }
+
+.pagination__icon {
+  color: var(--secondary-color);
+}

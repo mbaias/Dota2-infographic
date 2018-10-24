@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import PropTypes from 'prop-types';
 import { Switch, Route, withRouter } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Search from './components/Search';
 import TeamList from './components/TeamsList';
 import TeamDetails from './components/TeamDetails';
@@ -9,8 +10,10 @@ import './styles/main.css';
 
 class App extends Component {
   render() {
+    // const location = this.props.location !== null ? this.props.location : {};
     return (
       <div className="container">
+        <Navbar />
         <Switch location={this.props.location}>
           <Route
             exact
@@ -28,6 +31,7 @@ class App extends Component {
             path="/team/:teamId"
             component={TeamDetails}
           />
+          <Route exact path="/teams" component={TeamList} />
         </Switch>
       </div>
     );
@@ -36,7 +40,7 @@ class App extends Component {
 
 App.propTypes = {
   location: PropTypes.shape({
-    key: PropTypes.string.isRequired,
+    key: PropTypes.string,
     pathname: PropTypes.string.isRequired,
   }).isRequired,
 };
